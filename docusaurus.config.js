@@ -42,10 +42,11 @@ const config = {
     ({
       image: 'img/unrevealed-social-card.png',
       navbar: {
-        title: 'Unrevealed',
+        // title: 'Unrevealed',
         logo: {
           alt: 'Unrevealed logo',
-          src: 'img/logo.svg',
+          src: 'img/unrevealed-light.svg',
+          srcDark: 'img/unrevealed-dark.svg',
         },
         items: [
           {
