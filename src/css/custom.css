@@ -27,12 +27,12 @@ html[data-theme='dark'] {
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-background-color: #211e43;
-  --ifm-background-surface-color: #211e43;
+  --ifm-background-color: #0a0423;
+  --ifm-background-surface-color: #0a0423;
 }
 
 html[data-theme='dark'] .footer--dark {
-  --ifm-footer-background-color: #49a2aa2a;
+  --ifm-footer-background-color: #0a0423;
 }
 
 figcaption {
