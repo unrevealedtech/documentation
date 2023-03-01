@@ -1,0 +1,50 @@
+---
+sidebar_position: 1
+---
+
+# Introduction to Unrevealed
+
+Unrevealed is the feature management solution for developers who want to deliver more value to their customers, and worry less about their feature flags.
+
+We enable teams to ship more often with more confidence, while spending less time configuring feature flags and debugging their code.
+
+## Why another feature flag tool?
+
+Unrevealed was born out of frustration with existing solutions. Using those products is a headache, and I knew we could do better.
+
+Unrevealed is a tool that you'll actually love using. It integrates into your workflow when appropriate, and gets out of your way the rest of the time.
+
+So, what makes it different?
+
+### Workflow based approach
+
+<figure>
+  <img src="/img/docs/intro/kanban.png" alt="All features by stage" />
+  <figcaption>Features go through stages you can customize</figcaption>
+</figure>
+
+In Unrevealed, you don't need to think much about the rules that affect every feature. If feature A is in the `Released` stage, it's available for every user in every environment. You don't need to check what rules affect it in each environment, because it's fixed by its current stage.
+
+<figure>
+  <img src="/img/docs/intro/feature-released.png" alt="Feature A is released" />
+  <figcaption>Feature A is released</figcaption>
+</figure>
+
+If feature B is in `Beta`, it's available to a subset of users in production, and to every user in other environments.
+
+<figure>
+  <img src="/img/docs/intro/feature-beta.png" alt="Feature B is in beta" />
+  <figcaption>Feature B is in beta</figcaption>
+</figure>
+
+You can also completely disable a feature just by moving it to a certain stage.
+
+<figure>
+  <img
+    src="/img/docs/intro/move-to-killed.gif"
+    alt="Moving feature B to the Killed stage disables it in every environment"
+  />
+  <figcaption>
+    Moving feature B to the Killed stage disables it in every environment
+  </figcaption>
+</figure>

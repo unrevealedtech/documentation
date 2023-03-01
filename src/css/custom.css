@@ -34,3 +34,7 @@ html[data-theme='dark'] {
 html[data-theme='dark'] .footer--dark {
   --ifm-footer-background-color: #49a2aa2a;
 }
+
+figcaption {
+  text-align: center;
+}
