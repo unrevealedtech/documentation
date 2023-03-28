@@ -25,7 +25,7 @@ const sidebars = {
       type: 'category',
       label: 'SDKs',
       collapsible: false,
-      items: [{ type: 'doc', label: 'React', id: 'react-sdk' }],
+      items: [{ type: 'doc', label: 'React', id: 'react' }],
     },
   ],
 };

@@ -1,0 +1,127 @@
+# React SDK
+
+The React SDK helps you integrate Unrevealed in a React codebase.
+
+## Getting Started
+
+```bash
+npm install @unrevealed/react
+```
+
+or
+
+```bash
+yarn add @unrevealed/react
+```
+
+or
+
+```bash
+pnpm install @unrevealed/react
+```
+
+## Usage
+
+### Provider
+
+Add the provider at the root of your app. You can create a client key from your settings
+
+```tsx
+import { UnrevealedProvider } from '@unrevealed/react';
+
+function App() {
+  return (
+    <UnrevealedProvider clientKey={yourClientKey}>
+      <MainApp />
+    </UnrevealedProvider>
+  );
+}
+```
+
+**Props**
+
+| Provider Prop | Type   | Note                                               |
+| ------------- | ------ | -------------------------------------------------- |
+| `clientKey`\* | string | Generate an API key of type `Client` on Unrevealed |
+
+### Identify
+
+You can use `identify` to set the current user and team. You'll want to call it whenever the current user or the current team changes
+
+```tsx
+import { useIdentify } from '@unrevealed/react';
+
+function Login() {
+  const { identify } = useIdentify();
+  // ...
+
+  const login = () => {
+    // ...
+    identify({
+      user: {
+        id: user.id,
+        traits: {
+          email: user.email,
+          name: user.name,
+          // ...
+        },
+      },
+      team: {
+        id: team.id,
+        traits: {
+          name: team.name,
+          plan: team.plan,
+          // ...
+        },
+      },
+    });
+  };
+}
+```
+
+### Checking if a feature is enabled
+
+```ts
+import { useFeature } from '@unrevealed/react';
+
+function Component() {
+  const { enabled, loading } = useFeature('user-access');
+
+  if (loading) {
+    // sdk is loading features
+  }
+
+  if (enabled) {
+    // feature is enabled for the current user
+  } else {
+    // feature is disabled
+  }
+}
+```
+
+- `loading` will be set to `true` while Unrevealed is fetching the enabled feature flags
+
+### Feature Toggler Widget
+
+When using Unrevealed in development, you might need to check how the UI responds when a feature is disabled. You can do this without changing the feature's stage in the webapp, or changing your code, by using the Feature Toggler
+
+```tsx
+import { UnrevealedProvider, FeatureToggler } from '@unrevealed/react';
+
+function App() {
+  return (
+    <UnrevealedProvider clientKey={yourClientKey}>
+      {process.env.NODE_ENV === 'development' && <FeatureToggler />}
+      <MainApp />
+    </UnrevealedProvider>
+  );
+}
+```
+
+<figure>
+  <img
+    src="/img/docs/sdk/feature-toggler.gif"
+    alt="Toggle feature on and off in development"
+  />
+  <figcaption>Toggle feature on and off in development</figcaption>
+</figure>
