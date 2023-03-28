@@ -57,7 +57,7 @@ Closes the connection with the Unrevealed API.
 #### `isFeatureEnabled`
 
 ```ts
-client.isFeatureEnabled('feature-b', { user: { id: 'user-id', traits: {...} }, user: { id: 'team-id', traits: {...} } });
+client.isFeatureEnabled('feature-b', { user: { id: 'user-id', traits: {...} }, team: { id: 'team-id', traits: {...} } });
 ```
 
 Returns `true` if a feature is enabled for a certain user in a certain team, `false` otherwise.
@@ -71,7 +71,7 @@ Returns `true` if a feature is enabled for a certain user in a certain team, `fa
 #### `getEnabledFeatures`
 
 ```ts
-client.getEnabledFeatures({ user: { id: 'user-id', traits: {...} }, user: { id: 'team-id', traits: {...} } });
+client.getEnabledFeatures({ user: { id: 'user-id', traits: {...} }, team: { id: 'team-id', traits: {...} } });
 ```
 
 Returns an array of the keys of all the features enabled for a certain user in a certain team.
@@ -84,7 +84,7 @@ Returns an array of the keys of all the features enabled for a certain user in a
 #### identify
 
 ```ts
-await client.identify({ user: { id: 'user-id', traits: {...} }, user: { id: 'team-id', traits: {...} } });
+await client.identify({ user: { id: 'user-id', traits: {...} }, team: { id: 'team-id', traits: {...} } });
 ```
 
 Identifies a user and its current team. This will make the user and its team show up in the Unrevealed app, allowing you to select them for a beta for example.
