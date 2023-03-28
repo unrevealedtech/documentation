@@ -1,1 +1,54 @@
 # Configuring your workflow
+
+## Introduction
+
+Your workflow defines the stages features go through during your development and release process. It's composed of stages that are fully customizable.
+
+To make changes to your workflow, head to `Workflows` in the sidebar.
+
+<figure>
+  <img src="/img/docs/workflow/workflow-page.png" alt="An example workflow" />
+  <figcaption>An example workflow</figcaption>
+</figure>
+
+In this example, we have a worklow composed of 5 different stages:
+
+- Draft
+- Development
+- Beta
+- Released
+- Killed
+
+Each stage defines which rules can affect features that are currently in it. To illustrate, let's open the `Beta` stage and see how it's defined.
+
+<figure>
+  <img src="/img/docs/workflow/workflow-beta.png" alt="The beta stage" />
+  <figcaption>The beta stage</figcaption>
+</figure>
+
+You can see that features in this stage, will:
+
+- always be enabled in development
+- be enabled to a dynamic list of users and teams in production
+
+This dynamic list of users and teams is defined on a per feature basis.
+
+<figure>
+  <img
+    src="/img/docs/intro/feature-beta.png"
+    alt="Code Generation is in beta"
+  />
+  <figcaption>Code Generation is in beta</figcaption>
+</figure>
+
+You can modify existing stages or create new ones at any time.
+
+## Stage Configuration
+
+The stage configuration defines which rules affect features that are in them, in each of your environments. Here are the current options (we'll be adding more possibilities soon, like percentage based rollouts or custom rules):
+
+- **Enable for all users:** features in this stage will always be available in that specific environment. You can't enable other options when this is checked
+- **Enable for a dynamic set of users:** adds a per feature rule to select users who can access it
+- **Enable for a dynamic set of teams:** adds a per feature rule to select teams who can access it
+- **Enable for a dynamic set of users:** select users that always have access to all features in that stage
+- **Enable for a dynamic set of users:** select teams that always have access to all features in that stage

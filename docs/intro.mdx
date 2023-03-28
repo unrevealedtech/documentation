@@ -32,15 +32,18 @@ Taking a workflow based approach eliminates those problems entirely. In Unreveal
 In the figure above, we've configured our workflow to have 5 different stages (see [Workflow Configuration](/docs/workflow) to learn how to configure your stages). Each stage dictates which rules are applied or customizable on the features that are currently in it. For example, `Feature A` is currently in the `Released` stage, which means it's enabled to every user in every environment. In this case, the only information you need to understand how this feature behaves is the stage itself.
 
 <figure>
-  <img src="/img/docs/intro/feature-released.png" alt="Feature A is released" />
-  <figcaption>Feature A is released</figcaption>
+  <img
+    src="/img/docs/intro/feature-released.png"
+    alt="Workflow feature is released"
+  />
+  <figcaption>Workflow feature is released</figcaption>
 </figure>
 
-`Feature B`, on the other hand, is in the `Beta` stage. In `Beta`, every feature is enabled all the time in staging and development, and you can specify which users and teams can access it in production. This is designed to reduce the mental load, so you don't have to worry about things that are irrelevant (in this case, the rules that affect a feature in staging and development while it's in beta).
+`Code Generation`, on the other hand, is in the `Beta` stage. In `Beta`, every feature is enabled all the time in staging and development, and you can specify which users and teams can access it in production. This is designed to reduce the mental load, so you don't have to worry about things that are irrelevant (in this case, the rules that affect a feature in staging and development while it's in beta).
 
 <figure>
   <img src="/img/docs/intro/feature-beta.png" alt="Feature B is in beta" />
-  <figcaption>Feature B is in beta</figcaption>
+  <figcaption>Code generation is in beta</figcaption>
 </figure>
 
 Moving a feature from one stage to another affects rules in every environment at the same time. For example, you can turn off a feature completely by moving it to the `Killed` stage.
@@ -48,10 +51,10 @@ Moving a feature from one stage to another affects rules in every environment at
 <figure>
   <img
     src="/img/docs/intro/move-to-killed.gif"
-    alt="Moving feature B to the Killed stage disables it in every environment"
+    alt="Moving a feature to the Killed stage disables it in every environment"
   />
   <figcaption>
-    Moving Feature B to the Killed stage disables it in every environment
+    Moving a feature to the Killed stage disables it in every environment
   </figcaption>
 </figure>
 
