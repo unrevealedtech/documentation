@@ -30,6 +30,15 @@ const sidebars = {
         { type: 'doc', label: 'Node', id: 'node' },
       ],
     },
+    {
+      type: 'category',
+      label: 'Other',
+      collapsible: false,
+      items: [
+        { type: 'doc', label: 'Code generation', id: 'code-generation' },
+        { type: 'doc', label: 'VS Code extension', id: 'vscode' },
+      ],
+    },
   ],
 };
 
