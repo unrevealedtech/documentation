@@ -13,7 +13,21 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  docs: [{ type: 'doc', label: 'Introduction', id: 'intro' }],
+  docs: [
+    { type: 'doc', label: 'Introduction', id: 'intro' },
+    {
+      type: 'category',
+      label: 'Configuration',
+      collapsible: false,
+      items: [{ type: 'doc', label: 'Workflow', id: 'workflow' }],
+    },
+    {
+      type: 'category',
+      label: 'SDKs',
+      collapsible: false,
+      items: [{ type: 'doc', label: 'React', id: 'react-sdk' }],
+    },
+  ],
 };
 
 module.exports = sidebars;

@@ -1,43 +1,49 @@
----
-sidebar_position: 1
----
-
 # Introduction to Unrevealed
 
-Unrevealed is the feature management solution for developers who want to deliver more value to their customers, and worry less about their feature flags.
+Unrevealed is a workflow based feature management solution for developers who want to deliver more value, and worry less about their feature flags. It enables teams to ship more often with more confidence, and spend less time configuring feature flags and debugging their code.
 
-We enable teams to ship more often with more confidence, while spending less time configuring feature flags and debugging their code.
+## Why another tool?
 
-## Why another feature flag tool?
+There are tons of feature flag solutions out there, but they're all based on the same principle. You create a flag, then configure rules for each environment, defining who will get what version of your flag.
 
-Unrevealed was born out of frustration with existing solutions. Using those products is a headache, and I knew we could do better.
+If you've worked with feature flags, you're probably familiar with the following challenges:
 
-Unrevealed is a tool that you'll actually love using. It integrates into your workflow when appropriate, and gets out of your way the rest of the time.
+1. Making sense of your feature flags is hard
 
-So, what makes it different?
+   Rules can get pretty complex, with user targeting, segment targeting, custom rules, percentage based rollout,… You have to think about all the ways every rule can affect your features at any time, which quickly becomes overwhelming.
+
+   When trying to consider every environment, it becomes even more complex to create a mental model of the state of a flag.
+
+   And if you're trying to make sense of a bunch of features at the same time, good luck with that.
+
+2. Making changes to rules is error-prone
+
+   Any change you make to your rules, if you're not careful enough, can lead to unwanted behaviors, whether it's disabling a feature for a client in production, or turning on a feature in tests that was expected to be off and breaks your pipeline. This creates unwanted stress for engineers, and is nearly impossible to manage for non-technical people.
 
 ### Workflow based approach
+
+Taking a workflow based approach eliminates those problems entirely. In Unrevealed, your features go through stages which dictate what rules can and cannot affect their state. Let's illustrate with an example:
 
 <figure>
   <img src="/img/docs/intro/kanban.png" alt="All features by stage" />
   <figcaption>Features go through stages you can customize</figcaption>
 </figure>
 
-In Unrevealed, you don't need to think much about the rules that affect every feature. If feature A is in the `Released` stage, it's available for every user in every environment. You don't need to check what rules affect it in each environment, because it's fixed by its current stage.
+In the figure above, we've configured our workflow to have 5 different stages (see [Workflow Configuration](/docs/workflow) to learn how to configure your stages). Each stage dictates which rules are applied or customizable on the features that are currently in it. For example, `Feature A` is currently in the `Released` stage, which means it's enabled to every user in every environment. In this case, the only information you need to understand how this feature behaves is the stage itself.
 
 <figure>
   <img src="/img/docs/intro/feature-released.png" alt="Feature A is released" />
   <figcaption>Feature A is released</figcaption>
 </figure>
 
-If feature B is in `Beta`, it's available to a subset of users in production, and to every user in other environments.
+`Feature B`, on the other hand, is in the `Beta` stage. In `Beta`, every feature is enabled all the time in staging and development, and you can specify which users and teams can access it in production. This is designed to reduce the mental load, so you don't have to worry about things that are irrelevant (in this case, the rules that affect a feature in staging and development while it's in beta).
 
 <figure>
   <img src="/img/docs/intro/feature-beta.png" alt="Feature B is in beta" />
   <figcaption>Feature B is in beta</figcaption>
 </figure>
 
-You can also completely disable a feature just by moving it to a certain stage.
+Moving a feature from one stage to another affects rules in every environment at the same time. For example, you can turn off a feature completely by moving it to the `Killed` stage.
 
 <figure>
   <img
@@ -45,6 +51,8 @@ You can also completely disable a feature just by moving it to a certain stage.
     alt="Moving feature B to the Killed stage disables it in every environment"
   />
   <figcaption>
-    Moving feature B to the Killed stage disables it in every environment
+    Moving Feature B to the Killed stage disables it in every environment
   </figcaption>
 </figure>
+
+At this point, you should have a basic understanding of what Unrevealed does differently. There are more features that make it a lot easier for developers to work with feature flags, like the [code generator](/docs/code-generator) or the [VS Code extension](/docs/vscode-extension). Feel free to jump into any part of the docs. You can signup for the beta at [beta.unrevealed.tech](https://beta.unrevealed.tech)!

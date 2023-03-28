@@ -37,4 +37,6 @@ html[data-theme='dark'] .footer--dark {
 
 figcaption {
   text-align: center;
+  font-size: 14px;
+  font-style: italic;
 }
