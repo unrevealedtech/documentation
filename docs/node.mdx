@@ -46,7 +46,7 @@ const client = new UnrevealedClient({
 await client.connect();
 ```
 
-Call this once when initializing the server. This will create an EventSource object that receives the rules for your features. The SDK will keep a connection open to our server, and will receive new updates as you make changes. Rules are stored and evaluated locally.
+Call this once when initializing your server. The SDK will open a connection to our servers that will receive the rules for your feature flags, and real-time updates when any of those rules change. Rules are stored and evaluated locally, so evaluating feature flags is fast and synchronous.
 
 #### `close`
 
@@ -90,3 +90,7 @@ await client.identify({ user: { id: 'user-id', traits: {...} }, team: { id: 'tea
 ```
 
 Identifies a user and its current team. This will make the user and its team show up in the Unrevealed app, allowing you to select them for a beta for example.
+
+### Type safety
+
+You can make the `identify` function and `useFeature` hooks type safe by using the [code generator](/docs/code-generation), and defining the traits of your users and teams in the app.
