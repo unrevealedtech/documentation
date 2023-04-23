@@ -2,6 +2,8 @@
 
 The Node SDK helps you integrate Unrevealed in a Node server.
 
+It's not suitable for serverless environments yet. If this is something you need, send us an email to thom@unrevealed.tech and we'll prioritize it.
+
 ## Getting Started
 
 ```bash
@@ -44,7 +46,7 @@ const client = new UnrevealedClient({
 await client.connect();
 ```
 
-Call this once when initializing the server. This will create an EventSource object that receives the rules for your features. Rules are stored and evaluated locally
+Call this once when initializing the server. This will create an EventSource object that receives the rules for your features. The SDK will keep a connection open to our server, and will receive new updates as you make changes. Rules are stored and evaluated locally.
 
 #### `close`
 

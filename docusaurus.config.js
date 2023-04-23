@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Unrevealed',
   tagline: 'Workflow based feature management',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/unrevealed-icon-light.svg',
 
   url: 'https://docs.unrevealed.tech',
   baseUrl: '/',
@@ -42,11 +42,14 @@ const config = {
     ({
       image: 'img/unrevealed-social-card.png',
       navbar: {
-        // title: 'Unrevealed',
         logo: {
           alt: 'Unrevealed logo',
           src: 'img/unrevealed-light.svg',
           srcDark: 'img/unrevealed-dark.svg',
+          width: 150,
+          style: {
+            marginLeft: 10,
+          },
         },
         items: [
           {

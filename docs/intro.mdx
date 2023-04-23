@@ -1,28 +1,16 @@
 # Introduction to Unrevealed
 
-Unrevealed is a workflow based feature management solution for developers who want to deliver more value, and worry less about their feature flags. It enables teams to ship more often with more confidence, and spend less time configuring feature flags and debugging their code.
+Unrevealed is a workflow based feature management solution that makes developing, testing and releasing features a smooth ride. We're taking a whole new approach to feature flags, and strive to give you the best developer experience possible in the process.
 
 ## Why another tool?
 
-There are tons of feature flag solutions out there, but they're all based on the same principle. You create a flag, then configure rules for each environment, defining who will get what version of your flag.
+There are tons of feature flag solutions out there. Some simpler than others, some open source, some completely home made... But whatever you've seen before only provides feature flags as an abstract concept, making it your responsibility to configure them well enough for your use case.
 
-If you've worked with feature flags, you're probably familiar with the following challenges:
-
-1. Making sense of your feature flags is hard
-
-   Rules can get pretty complex, with user targeting, segment targeting, custom rules, percentage based rollout,… You have to think about all the ways every rule can affect your features at any time, which quickly becomes overwhelming.
-
-   When trying to consider every environment, it becomes even more complex to create a mental model of the state of a flag.
-
-   And if you're trying to make sense of a bunch of features at the same time, good luck with that.
-
-2. Making changes to rules is error-prone
-
-   Any change you make to your rules, if you're not careful enough, can lead to unwanted behaviors, whether it's disabling a feature for a client in production, or turning on a feature in tests that was expected to be off and breaks your pipeline. This creates unwanted stress for engineers, and is nearly impossible to manage for non-technical people.
+Unrevealed takes the opposite approach by solving concrete problems, like doing QA or running a private beta. And because Unrevealed is based on a 100% customizable worflow, you don't lose any of the flexibility.
 
 ### Workflow based approach
 
-Taking a workflow based approach eliminates those problems entirely. In Unrevealed, your features go through stages which dictate what rules can and cannot affect their state. Let's illustrate with an example:
+In Unrevealed, your features go through stages which dictate what rules can and cannot affect their state. Let's illustrate with an example:
 
 <figure>
   <img src="/img/docs/intro/kanban.png" alt="All features by stage" />
@@ -58,4 +46,6 @@ Moving a feature from one stage to another affects rules in every environment at
   </figcaption>
 </figure>
 
-At this point, you should have a basic understanding of what Unrevealed does differently. There are more features that make it a lot easier for developers to work with feature flags, like the [code generator](/docs/code-generation) or the [VS Code extension](/docs/vscode). Feel free to jump into any part of the docs. You can signup for the beta at [beta.unrevealed.tech](https://beta.unrevealed.tech)!
+At this point, you should have a basic understanding of what Unrevealed does differently. We've built features that make it a lot easier for you to work with feature flags, like the [code generator](/docs/code-generation) or the [VS Code extension](/docs/vscode).
+
+Feel free to jump into any part of the docs. If you have any questions, feel free to send us an email at thom@unrevealed.tech.

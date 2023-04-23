@@ -1,6 +1,6 @@
 # React SDK
 
-The React SDK helps you integrate Unrevealed in a React codebase.
+The React SDK makes it super easy to integrate Unrevealed inside your front end applications.
 
 ## Getting Started
 
@@ -8,13 +8,9 @@ The React SDK helps you integrate Unrevealed in a React codebase.
 npm install @unrevealed/react
 ```
 
-or
-
 ```bash
 yarn add @unrevealed/react
 ```
-
-or
 
 ```bash
 pnpm install @unrevealed/react
@@ -24,14 +20,16 @@ pnpm install @unrevealed/react
 
 ### Provider
 
-Add the provider at the root of your app. You can create a client key from your settings
+The first thing you need to do is add the Unrevealed provider at the root of your app. To generate a client key, go to the Api Keys menu in the app and create one. Select Client as the target SDK.
+
+You should use different API keys for different environments.
 
 ```tsx
 import { UnrevealedProvider } from '@unrevealed/react';
 
 function App() {
   return (
-    <UnrevealedProvider clientKey={yourClientKey}>
+    <UnrevealedProvider clientKey={yourApiKey}>
       <MainApp />
     </UnrevealedProvider>
   );
@@ -46,7 +44,7 @@ function App() {
 
 ### Identify
 
-You can use `identify` to set the current user and team. You'll want to call it whenever the current user or the current team changes
+You can use the `identify` function returned from the `useIdentify` hook to set the current user and team. Both are optional, but if your logged in user is part of an organization, or is currently in the context of a specific workspace of your app, we highly recommend you pass both.
 
 ```tsx
 import { useIdentify } from '@unrevealed/react';
@@ -79,6 +77,8 @@ function Login() {
 }
 ```
 
+#### Type safety
+
 ### Checking if a feature is enabled
 
 ```ts
@@ -89,6 +89,7 @@ function Component() {
 
   if (loading) {
     // sdk is loading features
+    // you don't have to check this every time, but it can be useful if your users experience unwanted flickering in your app
   }
 
   if (enabled) {
@@ -99,11 +100,13 @@ function Component() {
 }
 ```
 
-- `loading` will be set to `true` while Unrevealed is fetching the enabled feature flags
+### Type safety
+
+You can make the `identify` function and `useFeature` hooks type safe by using the [code generator](/docs/code-generation), and defining the traits of your users and teams in the app.
 
 ### Feature Toggler Widget
 
-When using Unrevealed in development, you might need to check how the UI responds when a feature is disabled. You can do this without changing the feature's stage in the webapp, or changing your code, by using the Feature Toggler
+When using Unrevealed in development, you might need to check how the UI responds when a feature is disabled. You can do this without changing the feature's stage in the webapp, or changing your code, by using the Feature Toggler.
 
 ```tsx
 import { UnrevealedProvider, FeatureToggler } from '@unrevealed/react';
