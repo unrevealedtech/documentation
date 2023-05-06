@@ -27,6 +27,7 @@ const sidebars = {
       collapsible: false,
       items: [
         { type: 'doc', label: 'React', id: 'react' },
+        { type: 'doc', label: 'Vue', id: 'vue' },
         { type: 'doc', label: 'Node', id: 'node' },
       ],
     },
