@@ -28,7 +28,9 @@ const sidebars = {
       items: [
         { type: 'doc', label: 'React', id: 'react' },
         { type: 'doc', label: 'Vue', id: 'vue' },
-        { type: 'doc', label: 'Node', id: 'node' },
+        { type: 'doc', label: 'Node (server)', id: 'node' },
+        { type: 'doc', label: 'Node (serverless)', id: 'serverless' },
+        { type: 'doc', label: 'Vanilla JS (browser)', id: 'js' },
       ],
     },
     {
