@@ -1,20 +1,18 @@
-# Configuring your workflow
+# Configuring your Release Flow
 
 ## Introduction
 
-Your workflow defines the stages features go through during your development and release process. It's composed of stages that are fully customizable.
-
-To make changes to your workflow, head to `Workflows` in the sidebar.
+Your Release Flow defines the stages features go through during your development and release process. It's composed of stages that are fully customizable.
 
 <figure>
   <img src="/img/docs/workflow/workflow-page.png" alt="An example workflow" />
   <figcaption>An example workflow</figcaption>
 </figure>
 
-In this example, we have a worklow composed of 5 different stages:
+In this example, we have a flow composed of 5 different stages:
 
 - Draft
-- Development
+- QA
 - Beta
 - Released
 - Killed
@@ -26,12 +24,13 @@ Each stage defines which rules can affect features that are currently in it. To 
   <figcaption>The beta stage</figcaption>
 </figure>
 
-You can see that features in this stage, will:
+You can see at the bottom that features in this stage will always be enabled in Development.
 
-- always be enabled in development
-- be enabled to a dynamic list of users and teams in production
+You can also see that we have 2 configurations checked in Production:
 
-This dynamic list of users and teams is defined on a per feature basis.
+1. We've defined stage level access on companies. This allows you to specify companies that always have access to your features while in this stage. In our case, we want our internal team to always access features that are in beta
+
+2. We've turned on feature level access on companies as well. This means that on each feature in this stage, you'll be able to select more companies who can access it
 
 <figure>
   <img
@@ -41,14 +40,19 @@ This dynamic list of users and teams is defined on a per feature basis.
   <figcaption>Code Generation is in beta</figcaption>
 </figure>
 
-You can modify existing stages or create new ones at any time.
-
 ## Stage Configuration
 
-The stage configuration defines which rules affect features that are in them, in each of your environments. Here are the current options (we'll be adding more possibilities soon, like percentage based rollouts or custom rules):
+To configure a stage, you will need to specify what access to turn on for each of your environment.
 
-- **Enable for all users:** features in this stage will always be available in that specific environment. You can't enable other options when this is checked
-- **Enable for a dynamic set of users:** adds a per feature rule to select users who can access it
-- **Enable for a dynamic set of teams:** adds a per feature rule to select teams who can access it
-- **Enable for a dynamic set of users:** select users that always have access to all features in that stage
-- **Enable for a dynamic set of users:** select teams that always have access to all features in that stage
+There are 2 types of access:
+
+- **Stage level**: this defines access that applies to every feature currently in that stage
+- **Feature level**: this defines what kind of extra access is configurable on a per feature basis
+
+There are 4 types of ways to give access to users:
+
+- **Users**: give direct access to users
+- **Companies**: give direct access to companies
+- **Lists**: give access to predefined lists of user and companies
+- **Lists**: give access to predefined lists of user and companies
+- **Partial rollout**: give access to a percentage of users or companies, selected randomly

@@ -10,14 +10,14 @@ Unrevealed takes the opposite approach by solving concrete problems, like doing 
 
 ### Workflow based approach
 
-In Unrevealed, your features go through stages which dictate what rules can and cannot affect their state. Let's illustrate with an example:
+In Unrevealed, you manage your features in a release board. Each feature goes through stages which dictate what rules can and cannot affect their state. Let's illustrate with an example:
 
 <figure>
   <img src="/img/docs/intro/kanban.png" alt="All features by stage" />
   <figcaption>Features go through stages you can customize</figcaption>
 </figure>
 
-In the figure above, we've configured our workflow to have 5 different stages (see [Workflow Configuration](/docs/workflow) to learn how to configure your stages). Each stage dictates which rules are applied or customizable on the features that are currently in it. For example, `Feature A` is currently in the `Released` stage, which means it's enabled to every user in every environment. In this case, the only information you need to understand how this feature behaves is the stage itself.
+In the figure above, we've configured our release flow to have 5 different stages (see [Release Flow](/docs/workflow) to learn how to configure your stages). Each stage dictates which rules are applied or customizable on the features that are currently in it. For example, `Feature A` is currently in the `Released` stage, which means it's enabled to every user in every environment. In this case, the only information you need to understand how this feature behaves is the stage itself.
 
 <figure>
   <img
@@ -27,7 +27,7 @@ In the figure above, we've configured our workflow to have 5 different stages (s
   <figcaption>Workflow feature is released</figcaption>
 </figure>
 
-`Code Generation`, on the other hand, is in the `Beta` stage. In `Beta`, every feature is enabled all the time in staging and development, and you can specify which users and teams can access it in production. This is designed to reduce the mental load, so you don't have to worry about things that are irrelevant (in this case, the rules that affect a feature in staging and development while it's in beta).
+`Code Generation`, on the other hand, is in the `Beta` stage. In `Beta`, every feature is enabled all the time in staging and development, and you can specify which companies can access it in production. Notice that this feature is also enabled to the `Unrevealed` team at the stage-level. This is designed to reduce the mental load, so you don't have to worry about things that are irrelevant (in this case, the rules that affect a feature in staging and development while it's in beta).
 
 <figure>
   <img src="/img/docs/intro/feature-beta.png" alt="Feature B is in beta" />
@@ -46,6 +46,6 @@ Moving a feature from one stage to another affects rules in every environment at
   </figcaption>
 </figure>
 
-At this point, you should have a basic understanding of what Unrevealed does differently. We've built features that make it a lot easier for you to work with feature flags, like the [code generator](/docs/code-generation) or the [VS Code extension](/docs/vscode).
+At this point, you should have a basic understanding of what Unrevealed does differently. We've also shipped stuff that makes it a lot easier for you to work with features in your code, like the [code generator](/docs/code-generation) or the [VS Code extension](/docs/vscode).
 
-Feel free to jump into any part of the docs. If you have any questions, feel free to send us an email at thom@unrevealed.tech.
+Feel free to jump into any part of the docs. If you have any questions, don't hesitate to send us an email at thom@unrevealed.tech.
