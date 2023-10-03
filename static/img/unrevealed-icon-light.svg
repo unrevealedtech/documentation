@@ -1,10 +1,6 @@
-<svg width="44" height="29" viewBox="0 0 44 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8912 3.14818C11.4524 6.2821 10 10.2214 10 14.5C10 19.1818 11.7391 23.4575 14.6066 26.7161C13.7674 26.902 12.8952 27 12 27C5.37258 27 0 21.6274 0 15C0 8.37258 5.37258 3 12 3C12.6435 3 13.2751 3.05065 13.8912 3.14818Z" fill="#0E0E12"/>
-<rect x="15" width="29" height="29" rx="14.5" fill="url(#paint0_linear_79_150)"/>
-<defs>
-<linearGradient id="paint0_linear_79_150" x1="17" y1="17" x2="40.2921" y2="10.9378" gradientUnits="userSpaceOnUse">
-<stop stop-color="#EF9EF3"/>
-<stop offset="1" stop-color="#AF5DF6"/>
-</linearGradient>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="244" height="160" viewBox="0 0 244 160" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M77.2598 17.3695C63.8048 34.6601 55.7914 56.3943 55.7914 80C55.7914 105.831 65.3868 129.421 81.2078 147.4C76.5777 148.425 71.7653 148.966 66.8267 148.966C30.2617 148.966 0.619995 119.324 0.619995 82.7591C0.619995 46.1941 30.2617 16.5522 66.8267 16.5522C70.3766 16.5522 73.8612 16.8315 77.2598 17.3695Z"
+    fill="black" />
+  <rect x="83.3804" width="159.999" height="160" rx="79.9997" fill="#84AFFF" />
 </svg>

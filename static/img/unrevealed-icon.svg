@@ -1,10 +1,6 @@
-<svg width="44" height="29" viewBox="0 0 44 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8912 3.14818C11.4524 6.2821 10 10.2214 10 14.5C10 19.1818 11.7391 23.4575 14.6066 26.7161C13.7674 26.902 12.8952 27 12 27C5.37258 27 0 21.6274 0 15C0 8.37258 5.37258 3 12 3C12.6435 3 13.2751 3.05065 13.8912 3.14818Z" fill="white"/>
-<rect x="15" width="29" height="29" rx="14.5" fill="url(#paint0_linear_79_143)"/>
-<defs>
-<linearGradient id="paint0_linear_79_143" x1="17" y1="17" x2="40.2921" y2="10.9378" gradientUnits="userSpaceOnUse">
-<stop stop-color="#EF9EF3"/>
-<stop offset="1" stop-color="#AF5DF6"/>
-</linearGradient>
-</defs>
+<svg width="128" height="80" viewBox="0 0 128 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Logo Unrevealed Light">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M37.2506 10.0939C30.7109 18.4979 26.8161 29.0616 26.8161 40.5351C26.8161 53.09 31.4798 64.5558 39.1694 73.2939C36.9189 73.7925 34.5798 74.0555 32.1794 74.0555C14.4072 74.0555 0 59.648 0 41.876C0 24.1039 14.4072 9.69666 32.1794 9.69666C33.9049 9.69666 35.5987 9.83244 37.2506 10.0939Z" fill="white"/>
+<path id="Vector_2" d="M84.0241 1.65112H84.024C62.5493 1.65112 45.1406 19.0598 45.1406 40.5345V40.5346C45.1406 62.0094 62.5493 79.4181 84.024 79.4181H84.0241C105.499 79.4181 122.908 62.0094 122.908 40.5346V40.5345C122.908 19.0598 105.499 1.65112 84.0241 1.65112Z" fill="#84B0FF"/>
+</g>
 </svg>
