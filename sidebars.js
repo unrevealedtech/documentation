@@ -19,7 +19,7 @@ const sidebars = {
       type: 'category',
       label: 'Configuration',
       collapsible: false,
-      items: [{ type: 'doc', label: 'Release Flow', id: 'workflow' }],
+      items: [{ type: 'doc', label: 'Workflow', id: 'workflow' }],
     },
     {
       type: 'category',
